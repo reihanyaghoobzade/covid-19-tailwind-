@@ -11,6 +11,72 @@
 </head>
 
 <body class="min-h-full bg-red-50">
+    <header class="container">
+        <div class="flex flex-row">
+            <div class="w-1/2 lg:hidden">
+                <div class="nav-collapse relative m-1 bg-red-200">
+                    <input type="checkbox" name="menu" id="check" class="checkbox" hidden>
+                    <div class="hamburger-menu w-10 h-10 absolute">
+                        <label for="check" class="menu cursor-pointer flex flex-col justify-around content-evenly w-full h-full">
+                            <div class="menu-line line-1 w-full h-1/6 bg-red-400 rounded-md"></div>
+                            <div class="menu-line line-2 w-full h-1/6 bg-red-400 rounded-md"></div>
+                            <div class="menu-line line-3 w-full h-1/6 bg-red-400 rounded-md"></div>
+                        </label>
+                    </div>
+                    <div class="navigation block w-3/4 sm:w-1/2 absolute bg-red-200 mt-12">
+                        <ul class="navbar-list text-gray-500">
+                            <li class="navbar-link m-2">
+                                <a href="#">مرور</a>
+                            </li>
+                            <li class="navbar-link m-2">
+                                <a href="#contagion">سرایت</a>
+                            </li>
+                            <li class="navbar-link m-2">
+                                <a href="#symptomps">علائم</a>
+                            </li>
+                            <li class="navbar-link m-2">
+                                <a href="#solutions">پیشگیری</a>
+                            </li>
+                            <li class="navbar-link m-2">
+                                <a href="#">محتوی</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/2 lg:w-1/3">
+                <div class="nav-brand flex justify-end lg:justify-start p-1">
+                    <img class="inline-block cursor-pointer" src="images/logo.svg" alt="لوگو" width="60" height="60" />
+                    <div class="hidden lg:inline-flex items-center cursor-pointer mx-4 font-semibold name">کووید 19</div>
+                </div>
+            </div>
+            <div class="w-1/2 lg:w-4/6 hidden lg:flex justify-end items-center lg:pl-16">
+                <nav class="nav w-1/2 flex justify-between items-center">
+                    <a href="#" class="active relative">مرور</a>
+                    <a href="#contagion">سرایت</a>
+                    <a href="#symptomps">علائم</a>
+                    <a href="#">پیشگیری</a>
+                    <button type="button">محتوی</button>
+                </nav>
+            </div>
+        </div>
+        <div class="lg:flex">
+            <div class="w-full lg:w-1/2 xl:w-7/12 p-0 inline-flex flex-row justify-start">
+                <img src="images/group18551.svg" alt="" width="1500" height="1500">
+            </div>
+            <div class="w-full lg:w-1/2 xl:w-5/12 inline-flex justify-start items-center">
+                <div class="text lg:pl-16">
+                    <div class="header-text">
+                        <h3 class="sub-header font-semibold">هشدار کووید 19</h3>
+                        <h1 class="main-head font-bold mb-4">خانه بمانید و قرنطینه شوید تا ویروس کرونا را متوقف کنیم</h1>
+                        <div class="content mb-4">هیچ داروی خاصی برای جلوگیری یا مهار بیماری کرونا ویروس (کووید 19) وجود ندارد. همچنین مردم به مراقبت اضافی نیز نیاز دارند.
+                        </div>
+                        <button class="font-semibold" type="button">بیایید کمک کنیم</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 </body>
 
 </html>

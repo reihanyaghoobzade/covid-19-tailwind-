@@ -4,3 +4,140 @@
 .container {
     width: 100%;
 }
+
+.navigation {
+    right: -50vw;
+    transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
+.humburger-menu {
+    transition: all 0.8s cubic-bezier(1, 1, 1, 1);
+}
+
+.menu {
+    transition: transform 0.5s;
+}
+
+.menu-line {
+    transition: all 0.5s 0.5s;
+    transform-origin: right;
+}
+
+.checkbox:checked~.navigation {
+    right: 0;
+}
+
+.checkbox:checked~.hamburger-menu .menu {
+    transform: rotateZ(90deg);
+}
+
+.checkbox:checked~.hamburger-menu .menu .line-1 {
+    transform: rotateZ(-40deg);
+}
+
+.checkbox:checked~.hamburger-menu .menu .line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked~.hamburger-menu .menu .line-3 {
+    transform: rotateZ(40deg);
+}
+
+.nav a,
+.navbar-link {
+    transition: .4s;
+}
+
+.nav a:hover,
+.navbar-link:hover {
+    letter-spacing: 1px;
+}
+
+.sub-header {
+    font-size: 1rem;
+    color: #fa5652;
+}
+
+.main-head {
+    font-size: 2rem;
+    color: #035755;
+}
+
+.content {
+    font-size: .9rem;
+    line-height: 2rem;
+    word-spacing: 0.2rem;
+}
+
+.nav {
+    color: #035755;
+}
+
+.nav .active,
+.nav button {
+    color: #fb4c47;
+}
+
+.nav .active::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: #fb4c47;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 2px);
+    bottom: -10px;
+}
+
+.nav button {
+    border: 1px solid #fb4c47;
+    border-radius: 2.5rem;
+    padding: 0.5rem 1.5rem;
+    transition: 0.2s ease-in-out;
+}
+
+.nav button:hover {
+    color: #f7f1f1;
+    background-color: #fa5652;
+    letter-spacing: 1px;
+}
+
+.nav-brand .name {
+    color: #035755;
+}
+
+.text button {
+    color: #f7f1f1;
+    background-color: #fa5652;
+    padding: 0.6rem 2.2rem;
+    border: 1px solid #fa5652;
+    border-radius: 2.5rem;
+    transition: 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 1000px) {
+    .sub-header {
+        font-size: 1.5rem;
+    }
+    .main-head {
+        font-size: 2.3em;
+    }
+    .content {
+        font-size: .9rem;
+    }
+    .text button {
+        padding: 0.3rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sub-header {
+        font-size: 1rem;
+    }
+    .main-head {
+        font-size: 1.5em;
+    }
+    .content {
+        font-size: .8rem;
+    }
+}
