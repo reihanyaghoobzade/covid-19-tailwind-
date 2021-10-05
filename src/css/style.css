@@ -1,8 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.container {
-    width: 100%;
+@layer components {
+    .container {
+        max-width: 100%;
+    }
 }
 
 .navigation {
@@ -115,6 +117,31 @@
     transition: 0.2s ease-in-out;
 }
 
+.about-us .text button {
+    color: #fa5652;
+    background-color: rgba(250, 86, 82, 0.15);
+    border: 1px solid rgba(250, 86, 82, 0.15);
+    border-radius: 2.5rem;
+    padding: 0.6rem 2.2rem;
+    transition: 0.2s ease-in-out;
+}
+
+.about-us .text button:hover {
+    letter-spacing: 1px;
+}
+
+.image .img-1 {
+    z-index: -10;
+    top: -20vh;
+    right: -10vw;
+}
+
+.image .img-2 {
+    z-index: -10;
+    right: -8.5vw;
+    bottom: -20vh;
+}
+
 @media only screen and (max-width: 1000px) {
     .sub-header {
         font-size: 1.5rem;
@@ -126,6 +153,9 @@
         font-size: .9rem;
     }
     .text button {
+        padding: 0.3rem 1rem;
+    }
+    .about-us .text button {
         padding: 0.3rem 1rem;
     }
 }

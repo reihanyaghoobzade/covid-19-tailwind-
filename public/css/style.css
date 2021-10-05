@@ -570,12 +570,20 @@ video {
   }
 }
 
+.container {
+  max-width: 100%;
+}
+
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.float-right {
+  float: right;
 }
 
 .m-1 {
@@ -597,6 +605,10 @@ video {
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .block {
@@ -810,10 +822,6 @@ video {
   --tw-ring-shadow: 0 0 #0000;
 }
 
-.container {
-  width: 100%;
-}
-
 .navigation {
   right: -50vw;
   transition: right 0.8s cubic-bezier(1, 0, 0, 1);
@@ -924,6 +932,31 @@ video {
   transition: 0.2s ease-in-out;
 }
 
+.about-us .text button {
+  color: #fa5652;
+  background-color: rgba(250, 86, 82, 0.15);
+  border: 1px solid rgba(250, 86, 82, 0.15);
+  border-radius: 2.5rem;
+  padding: 0.6rem 2.2rem;
+  transition: 0.2s ease-in-out;
+}
+
+.about-us .text button:hover {
+  letter-spacing: 1px;
+}
+
+.image .img-1 {
+  z-index: -10;
+  top: -20vh;
+  right: -10vw;
+}
+
+.image .img-2 {
+  z-index: -10;
+  right: -8.5vw;
+  bottom: -20vh;
+}
+
 @media only screen and (max-width: 1000px) {
   .sub-header {
     font-size: 1.5rem;
@@ -938,6 +971,10 @@ video {
   }
 
   .text button {
+    padding: 0.3rem 1rem;
+  }
+
+  .about-us .text button {
     padding: 0.3rem 1rem;
   }
 }
@@ -966,6 +1003,14 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:order-first {
+    order: -9999;
+  }
+
+  .lg\:order-last {
+    order: 9999;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -988,6 +1033,10 @@ video {
 
   .lg\:w-4\/6 {
     width: 66.666667%;
+  }
+
+  .lg\:w-5\/12 {
+    width: 41.666667%;
   }
 
   .lg\:justify-start {
