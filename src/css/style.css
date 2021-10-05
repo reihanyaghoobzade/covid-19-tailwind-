@@ -142,6 +142,16 @@
     bottom: -20vh;
 }
 
+.contagion-card {
+    transition: 0.5s ease-in-out;
+    background-color: rgb(255, 245, 245);
+}
+
+.contagion .image {
+    left: 3vw;
+    top: 50%;
+}
+
 @media only screen and (max-width: 1000px) {
     .sub-header {
         font-size: 1.5rem;
