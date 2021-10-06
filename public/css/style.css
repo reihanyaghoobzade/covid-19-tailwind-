@@ -615,10 +615,6 @@ video {
   bottom: 33.333333%;
 }
 
-.-bottom-3\/4 {
-  bottom: -75%;
-}
-
 .left-0 {
   left: 0px;
 }
@@ -978,6 +974,11 @@ video {
   padding: 1rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1020,6 +1021,10 @@ video {
   font-weight: 700;
 }
 
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
 .text-gray-50 {
   --tw-text-opacity: 1;
   color: rgba(249, 250, 251, var(--tw-text-opacity));
@@ -1028,6 +1033,11 @@ video {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
+
+.text-green-700 {
+  --tw-text-opacity: 1;
+  color: rgba(4, 120, 87, var(--tw-text-opacity));
 }
 
 .text-green-800 {
@@ -1088,6 +1098,10 @@ video {
   transition-timing-function: linear;
 }
 
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .navigation {
   right: -50vw;
   transition: right 0.8s cubic-bezier(1, 0, 0, 1);
@@ -1137,11 +1151,13 @@ video {
 }
 
 .sub-header {
+  font-weight: 600;
   font-size: 1rem;
   color: #fa5652;
 }
 
 .main-head {
+  font-weight: 700;
   font-size: 2rem;
   color: #035755;
 }
@@ -1185,10 +1201,6 @@ video {
   letter-spacing: 1px;
 }
 
-.nav-brand .name {
-  color: #035755;
-}
-
 .text button {
   color: #f7f1f1;
   background-color: #fa5652;
@@ -1198,7 +1210,7 @@ video {
   transition: 0.2s ease-in-out;
 }
 
-.about-us .text button {
+#about-us .text button {
   color: #fa5652;
   background-color: rgba(250, 86, 82, 0.15);
   border: 1px solid rgba(250, 86, 82, 0.15);
@@ -1207,7 +1219,7 @@ video {
   transition: 0.2s ease-in-out;
 }
 
-.about-us .text button:hover {
+.text button:hover {
   letter-spacing: 1px;
 }
 
@@ -1228,7 +1240,7 @@ video {
   background-color: rgb(255, 245, 245);
 }
 
-.contagion .image {
+#contagion .image {
   left: 3vw;
   top: 50%;
 }
@@ -1238,17 +1250,15 @@ video {
 }
 
 #solutions .circle {
-  --tw-bg-opacity: 1;
-  background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgba(239, 68, 68, var(--tw-text-opacity));
   position: absolute;
   width: 50px;
   height: 50px;
   right: -5vw;
+  background-color: #fdb7b5;
+  color: #fa5652;
   border-radius: 50%;
 }
 
@@ -1265,11 +1275,8 @@ video {
     font-size: .9rem;
   }
 
-  .text button {
-    padding: 0.3rem 1rem;
-  }
-
-  .about-us .text button {
+  .text button,
+    #about-us .text button {
     padding: 0.3rem 1rem;
   }
 }
@@ -1427,6 +1434,10 @@ video {
 
   .lg\:justify-between {
     justify-content: space-between;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
   }
 
   .lg\:pl-16 {

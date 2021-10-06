@@ -56,11 +56,13 @@
 }
 
 .sub-header {
+    @apply font-semibold;
     font-size: 1rem;
     color: #fa5652;
 }
 
 .main-head {
+    @apply font-bold;
     font-size: 2rem;
     color: #035755;
 }
@@ -104,10 +106,6 @@
     letter-spacing: 1px;
 }
 
-.nav-brand .name {
-    color: #035755;
-}
-
 .text button {
     color: #f7f1f1;
     background-color: #fa5652;
@@ -117,7 +115,7 @@
     transition: 0.2s ease-in-out;
 }
 
-.about-us .text button {
+#about-us .text button {
     color: #fa5652;
     background-color: rgba(250, 86, 82, 0.15);
     border: 1px solid rgba(250, 86, 82, 0.15);
@@ -126,7 +124,7 @@
     transition: 0.2s ease-in-out;
 }
 
-.about-us .text button:hover {
+.text button:hover {
     letter-spacing: 1px;
 }
 
@@ -147,7 +145,7 @@
     background-color: rgb(255, 245, 245);
 }
 
-.contagion .image {
+#contagion .image {
     left: 3vw;
     top: 50%;
 }
@@ -157,11 +155,13 @@
 }
 
 #solutions .circle {
-    @apply bg-red-200 font-bold text-red-500 text-2xl;
+    @apply font-bold text-2xl;
     position: absolute;
     width: 50px;
     height: 50px;
     right: -5vw;
+    background-color: #fdb7b5;
+    color: #fa5652;
     border-radius: 50%;
 }
 
@@ -175,10 +175,8 @@
     .content {
         font-size: .9rem;
     }
-    .text button {
-        padding: 0.3rem 1rem;
-    }
-    .about-us .text button {
+    .text button,
+    #about-us .text button {
         padding: 0.3rem 1rem;
     }
 }
