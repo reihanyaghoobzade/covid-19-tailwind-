@@ -1,28 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer components {
-    .container {
-        max-width: 100%;
-    }
+@font-face {
+    font-family: 'AIranianSans';
+    src: url('../../public/font/AIranianSans.ttf');
 }
 
-.navigation {
-    right: -50vw;
-    transition: right 0.8s cubic-bezier(1, 0, 0, 1);
-}
-
-.humburger-menu {
-    transition: all 0.8s cubic-bezier(1, 1, 1, 1);
-}
-
-.menu {
-    transition: transform 0.5s;
-}
-
-.menu-line {
-    transition: all 0.5s 0.5s;
-    transform-origin: right;
+body {
+    font-family: 'AIranianSans';
 }
 
 .checkbox:checked~.navigation {
@@ -45,32 +30,20 @@
     transform: rotateZ(40deg);
 }
 
-.nav a,
-.navbar-link {
-    transition: .4s;
-}
-
-.nav a:hover,
-.navbar-link:hover {
-    letter-spacing: 1px;
-}
-
 .sub-header {
-    @apply font-semibold;
-    font-size: 1rem;
+    @apply font-semibold text-base;
     color: #fa5652;
 }
 
 .main-head {
-    @apply font-bold;
-    font-size: 2rem;
+    @apply font-bold text-4xl;
     color: #035755;
 }
 
 .content {
-    font-size: .9rem;
-    line-height: 2rem;
+    @apply text-sm leading-8;
     word-spacing: 0.2rem;
+    color: #415e56;
 }
 
 .nav {
@@ -83,71 +56,43 @@
 }
 
 .nav .active::before {
+    @apply absolute -bottom-3 w-1 h-1 rounded-full;
     content: "";
-    width: 4px;
-    height: 4px;
     background-color: #fb4c47;
-    position: absolute;
-    border-radius: 50%;
     left: calc(50% - 2px);
-    bottom: -10px;
 }
 
 .nav button {
+    @apply rounded-full py-2 px-6 transition;
     border: 1px solid #fb4c47;
-    border-radius: 2.5rem;
-    padding: 0.5rem 1.5rem;
-    transition: 0.2s ease-in-out;
 }
 
 .nav button:hover {
     color: #f7f1f1;
     background-color: #fa5652;
-    letter-spacing: 1px;
 }
 
 .text button {
+    @apply transition rounded-full py-2 px-9;
     color: #f7f1f1;
     background-color: #fa5652;
-    padding: 0.6rem 2.2rem;
     border: 1px solid #fa5652;
-    border-radius: 2.5rem;
-    transition: 0.2s ease-in-out;
 }
 
 #about-us .text button {
+    @apply transition rounded-full py-2 px-9;
     color: #fa5652;
     background-color: rgba(250, 86, 82, 0.15);
     border: 1px solid rgba(250, 86, 82, 0.15);
-    border-radius: 2.5rem;
-    padding: 0.6rem 2.2rem;
-    transition: 0.2s ease-in-out;
-}
-
-.text button:hover {
-    letter-spacing: 1px;
-}
-
-.image .img-1 {
-    z-index: -10;
-    top: -20vh;
-    right: -10vw;
-}
-
-.image .img-2 {
-    z-index: -10;
-    right: -8.5vw;
-    bottom: -20vh;
 }
 
 .contagion-card {
-    transition: 0.5s ease-in-out;
+    @apply flex flex-col justify-center items-center rounded-md shadow transition;
     background-color: rgb(255, 245, 245);
 }
 
-#contagion .image {
-    left: 3vw;
-    top: 50%;
+.contagion-card:hover {
+    @apply shadow-xl border-b-4 border-red-600;
 }
 
 #solutions .mid {
@@ -155,40 +100,32 @@
 }
 
 #solutions .circle {
-    @apply font-bold text-2xl;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    right: -5vw;
+    @apply font-bold text-2xl rounded-full absolute w-12 h-12;
     background-color: #fdb7b5;
     color: #fa5652;
-    border-radius: 50%;
 }
 
 @media only screen and (max-width: 1000px) {
     .sub-header {
-        font-size: 1.5rem;
+        @apply text-2xl;
     }
     .main-head {
-        font-size: 2.3em;
+        @apply text-4xl;
     }
     .content {
-        font-size: .9rem;
+        @apply text-sm;
     }
     .text button,
     #about-us .text button {
-        padding: 0.3rem 1rem;
+        @apply py-1 px-4;
     }
 }
 
 @media only screen and (max-width: 600px) {
     .sub-header {
-        font-size: 1rem;
+        @apply text-base;
     }
     .main-head {
-        font-size: 1.5em;
-    }
-    .content {
-        font-size: .8rem;
+        @apply text-2xl;
     }
 }
