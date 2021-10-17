@@ -13,6 +13,5 @@ module.exports = {
         require('tailwindcss-rtl'),
         require('@tailwindcss/line-clamp'),
         require('@tailwindcss/aspect-ratio'),
-        require('cssnano'),
     ],
 }
